@@ -5,7 +5,7 @@ function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/solutions")
+    fetch("https://github.com/simoncriado/Wordle/blob/master/data/db.json")
       .then((res) => res.json())
       .then((json) => {
         // Random int between 0 & 14
