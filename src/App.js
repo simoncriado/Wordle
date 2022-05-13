@@ -19,7 +19,6 @@ function App() {
       "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json",
       {
         headers: {
-          "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Origin":
             "https://wordle-react-project.netlify.app/",
         },
