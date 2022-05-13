@@ -20,7 +20,7 @@ function App() {
       {
         headers: {
           "Access-Control-Allow-Origin":
-            "https://wordle-react-project.netlify.app/",
+            "*",
           "Access-Control-Allow-Methods": [
             "POST",
             "GET",
