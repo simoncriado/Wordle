@@ -1,15 +1,37 @@
 import { useEffect, useState } from "react";
 import Wordle from "./components/Wordle";
 
+// const express = require("express");
+// const cors = require("cors");
+// const app = express();
+// //use cors as middleware
+// app.use(
+//   cors({
+//     origin: "*",
+//   })
+// );
+
 function App() {
   const [solution, setSolution] = useState(null);
 
   useEffect(() => {
-    fetch("https://github.com/simoncriado/Wordle/blob/master/data/db.json")
+    fetch(
+      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json",
+      {
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Origin":
+            "https://wordle-react-project.netlify.app/",
+          "Access-Control-Allow-Methods": "GET",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((json) => {
+        const solutions = json.solutions;
         // Random int between 0 & 14
-        const randomSolution = json[Math.floor(Math.random() * json.length)];
+        const randomSolution =
+          solutions[Math.floor(Math.random() * solutions.length)];
         setSolution(randomSolution.word);
       });
   }, [setSolution]);
