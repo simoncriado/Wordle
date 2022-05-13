@@ -1,13 +1,34 @@
 import React, { useEffect, useState } from "react";
 
+// const express = require("express");
+// const cors = require("cors");
+// const app = express();
+// //use cors as middleware
+// app.use(
+//   cors({
+//     origin: "*",
+//   })
+// );
+
 export default function Keypad({ usedKeys }) {
   const [letters, setLetters] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/letters")
+    fetch(
+      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json",
+      {
+        headers: {
+          "Access-Control-Allow-Headers": "Content-Type",
+          "Access-Control-Allow-Origin":
+            "https://wordle-react-project.netlify.app/",
+          "Access-Control-Allow-Methods": "GET",
+        },
+      }
+    )
       .then((res) => res.json())
       .then((json) => {
-        setLetters(json);
+        const letters = json.letters;
+        setLetters(letters);
       });
   }, []);
 
