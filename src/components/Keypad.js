@@ -21,7 +21,6 @@ export default function Keypad({ usedKeys }) {
           "Access-Control-Allow-Headers": "Content-Type",
           "Access-Control-Allow-Origin":
             "https://wordle-react-project.netlify.app/",
-          "Access-Control-Allow-Methods": "GET",
         },
       }
     )
