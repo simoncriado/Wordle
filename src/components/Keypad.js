@@ -20,6 +20,25 @@ export default function Keypad({ usedKeys }) {
         headers: {
           "Access-Control-Allow-Origin":
             "https://wordle-react-project.netlify.app/",
+          "Access-Control-Allow-Methods": [
+            "POST",
+            "GET",
+            "OPTIONS",
+            "DELETE",
+            "PUT",
+          ],
+          "Access-Control-Allow-Headers": [
+            "append",
+            "delete",
+            "entries",
+            "foreach",
+            "get",
+            "has",
+            "keys",
+            "set",
+            "values",
+            "Authorization",
+          ],
         },
       }
     )
