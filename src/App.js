@@ -16,7 +16,10 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json"
+      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json",
+      {
+        headers: {}
+      }
     )
       .then((res) => res.json())
       .then((json) => {
