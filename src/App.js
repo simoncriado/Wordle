@@ -16,32 +16,7 @@ function App() {
 
   useEffect(() => {
     fetch(
-      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json",
-      {
-        headers: {
-          "Access-Control-Allow-Origin":
-            "*",
-          "Access-Control-Allow-Methods": [
-            "POST",
-            "GET",
-            "OPTIONS",
-            "DELETE",
-            "PUT",
-          ],
-          "Access-Control-Allow-Headers": [
-            "append",
-            "delete",
-            "entries",
-            "foreach",
-            "get",
-            "has",
-            "keys",
-            "set",
-            "values",
-            "Authorization",
-          ],
-        },
-      }
+      "https://raw.githubusercontent.com/simoncriado/Wordle/master/data/db.json"
     )
       .then((res) => res.json())
       .then((json) => {
