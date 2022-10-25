@@ -1,6 +1,6 @@
 # Wordle Game
 
-Project part of an online React course. I choose to do this to practice my React skills. Key project functionalities:
+Project part of an online React course. I chose to do this project to practice my React skills. Key project functionalities:
 
   - To be played on a computer only!
   - You can make new guesses.
